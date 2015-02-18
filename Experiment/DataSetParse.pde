@@ -40,3 +40,20 @@ void tableLoader(){
   
   saveTable(resultsTable, "cancerData.csv");  //save the edited table as a .csv file
 }
+
+ArrayList<Sample> samples = new ArrayList<Sample>();
+String[] content;
+
+void tableParser(){
+  content = loadStrings("breast-cancer-wisconsin.data");
+  for(int i=0; i < content.length; i++){
+    int[] list = int(split(content[i], ","));
+    samples.add(new Sample(list));
+  }
+}
+
+void printSample(Sample thisSample){
+  for(int i = 0; i < attributes.length; i++){
+    println(thisSample.traits[i]);
+  }
+}
