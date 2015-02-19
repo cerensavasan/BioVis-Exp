@@ -20,15 +20,11 @@ class Sample{
 
 void drawLayout(){
   //create layout (9 rectangles)
-  rect(10, 50, 180, 100); //starting with leftmost
-  rect(200, 50, 180, 100);
-  rect(390, 50, 180, 100);
-  rect(580, 50, 180, 100);
-  rect(770, 50, 180, 100);
-  rect(960, 50, 180, 100);
-  rect(1150, 50, 180, 100);
-  rect(1340, 50, 180, 100);
-  rect(1530, 50, 180, 100);
+  int x = 10;
+  for(int r = 0; r < 10; r++){
+    rect(x, 50, 180, 100); //starting with leftmost
+    x = x + 190;
+  }
   
   //labels for layout
   fill(0,0,0);
